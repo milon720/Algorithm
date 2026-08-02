@@ -21,6 +21,10 @@ int main(){
         graph[u].push_back(v);
         graph[v].push_back(u); //if bidirectional graph
     }
-    dfs(0); //start form 0 node
+    //if disconnect graph
+    for(int i=1;i<=n;i++){
+        if(!vis[i])
+            dfs(i);   //start form 0
+    }
 
 }
